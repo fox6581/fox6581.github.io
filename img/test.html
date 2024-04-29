@@ -1,0 +1,58 @@
+<div class="image-text-block">
+    <div class="image">
+      <img src="1.jpg" alt="Your Image">
+    </div>
+    <div class="text">
+      <p>Ваш текст здесь...</p>
+    </div>
+  </div>
+  
+
+  <style>
+.image-text-block {
+  display: flex;
+  width: 500px; /* Установите нужную ширину */
+}
+
+.image {
+  position: relative;
+  width: 50%; /* Ширина блока изображения */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text {
+    background: #000;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 43px;
+    left: 23px;
+    z-index: -1;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.text p {
+  color: white; /* Цвет текста */
+  font-size: 18px; /* Размер шрифта */
+}
+
+.mob1 img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Тень */
+  z-index: -1;
+}
+
+
+  </style>

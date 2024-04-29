@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Главная</title>
+</head>
+
+<body>
+    <header>
+        <!-- Бургер-кнопка в header -->
+        <div class="burger" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="header-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="visual-design.html">Система Visual Design</a></li>
+                <li><a href="services.html">Мои услуги</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Выезжающее меню в body -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="visual-design.html">Система Visual Design</a></li>
+            <li><a href="services.html">Мои услуги</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="block0">
+        <div class="block2">
+            <div class="block2__deck">
+                <h1>Александра Климова</h1>
+                <p>&bull; модельер &bull; стилист &bull; имиджмейкер<br> 
+                    специалист по раскрытию своего потенциала через визуал</p>
+                <h2><i>#Потенциал #Предназначение</br>
+                        #Продающий_визуал</br>
+                        #Улучшить_взаимоотношения</i></h2>
+    
+            </div>
+    
+            <!-- блок 2 -->
+            <div class="block2__slider">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img loading="lazy"
+                                src="https://img.freepik.com/premium-photo/beautiful-pastel-pink-and-purple-skies-and-clouds-at-night-as-the-sun-sets-beautiful-sky-and-clouds_692702-2097.jpg"
+                                alt="Image 1"></div>
+                        <div class="slide"><img loading="lazy"
+                                src="https://img.freepik.com/premium-photo/beautiful-pastel-pink-and-purple-skies-and-clouds-at-night-as-the-sun-sets-beautiful-sky-and-clouds_692702-2097.jpg"
+                                alt="Image 2"></div>
+                        <div class="slide"><img loading="lazy"
+                                src="https://img.freepik.com/premium-photo/beautiful-pastel-pink-and-purple-skies-and-clouds-at-night-as-the-sun-sets-beautiful-sky-and-clouds_692702-2097.jpg"
+                                alt="Image 3"></div>
+                        <div class="slide"><img loading="lazy"
+                                src="https://img.freepik.com/premium-photo/beautiful-pastel-pink-and-purple-skies-and-clouds-at-night-as-the-sun-sets-beautiful-sky-and-clouds_692702-2097.jpg"
+                                alt="Image 4"></div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="slider-dots">
+    
+                            <span class="dot active"></span>
+                            <span class="dot" "></span>
+                        <span class=" dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- блок 3 -->
+    <div class="block3">
+        <div class="block3__desc">
+            <p>Обо мне Visual design поможет с текст, текст, текст, текст,
+                текст</p>
+            <p> Visual design поможет с текст, текст, текст, текст, текст
+                Обо мне Visual design поможет с текст, текст, текст, текст,
+                текст</p>
+            <p>Visual design поможет с текст, текст, текст, текст, текст
+                Чем может быть полезен Visual Design</p>
+
+        </div>
+
+        <div class="block3_photo_container">
+
+            <img loading="lazy" src="https://img.freepik.com/premium-photo/beautiful-pastel-pink-and-purple-skies-and-clouds-at-night-as-the-sun-sets-beautiful-sky-and-clouds_692702-2097.jpg"
+                alt="Ваше фото">
+            <div class="overlay"></div>
+
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+    <script src="js/slaider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визуал дизайн</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles_about.css"> -->
+</head>
+<style>
+    .visual1 {
+        /* background-image: url("img/visual.jpg"); */
+        /* height: 100vh; */
+        /* background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    margin: 0 auto; */
+
+    }
+    .mobile{
+        display: none;
+    }
+    .visual3_div1 div div img, .visual4 img, .visual5_div1 div img{
+    display: none;
+}
+    .visual2_div1 ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px
+    }
+
+    .visual2_div1 {
+        padding: 30px 0;
+        background-color: rgba(172, 191, 226, 0.5);
+
+    }
+
+    .visual2_div1 div {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .visual2 h2 {
+        text-align: center;
+    }
+
+    .visual3 h2 {
+        padding-left: 25%;
+    }
+
+    .visual2 h2 span,
+    .visual3 h2 span {
+        color: rgb(122, 131, 165);
+        padding: 15px 0;
+        font-style: italic;
+    }
+
+    .visual3_div1 {
+        background-image: url('img/visual3.jpg');
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .visual5_div1 {
+        background-image: url('img/visual5.jpg');
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .visual3_div1 div,
+    .visual5_div1 div {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0
+    }
+
+
+    .visual3_div1 div div,
+    .visual5_div1 div div {
+        max-width: 650px;
+        margin: 0
+    }
+
+    .visual5_div1 div div {
+       max-width:  580px;
+        margin: 0
+    }
+    .visual6 div:nth-child(2){
+        display:flex ;
+        flex-direction: column;
+    align-items: center;
+    width: 110%;
+    }
+    
+    .visual3_div1 div div ul li,
+    .visual4 div ul li,
+    .visual5_div1 div div ul li{
+    list-style-type: none; /* Прячем исходные маркеры */
+   }
+   .visual3_div1 div div ul li::before,  .visual4 div ul li::before, .visual5_div1 div div ul li::before {
+    color:  rgb(122, 131, 165); /* Цвет маркера */
+    content: "•";/* Сам маркер */
+    padding-right: 10px; /* Расстояние от маркера до текста */
+   }
+
+    .visual3_div1 div div ul li,
+    .visual4 div ul li,
+    .visual5_div1 div div ul li {
+        line-height: 1.5;
+        padding-bottom: 20px;
+    }
+
+    footer {
+  
+    margin-top: 30px;
+}
+.mobile-menu ul {
+ 
+    padding-inline-start: 40px;
+}
+    .visual2_div1 div  ul li {
+        list-style-type: none; 
+    }
+    .visual2_div1 div  ul li{
+        padding-left: 20px;
+    }
+
+    .visual2_div1 div  ul li::before {
+        color: rgb(122, 131, 165);
+        padding-right: 10px;
+    }
+    .visual6 ul li{
+        list-style: none;
+       
+    }
+    .visual6 ul li::before{
+         content: "•";
+    color: #DCE1EC;
+    margin-right: 8px;
+    line-height: 1.5;}
+   
+    .visual2_div1 div  ul{  list-style-image: url(/img/strelka.png); }
+  
+
+    .know_h2 {
+        color: rgb(122, 131, 165);
+        margin-top: 15px;
+    }
+
+    .visual5_div1 h2 {
+        padding-left: 25%;
+    }
+
+    .sobs {
+        padding-left: 24px;
+        width: 426px;
+    text-align: center;
+    }
+
+    .visual4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-image: URL("img/visual4.jpg");
+        padding: 20px 0;
+        background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .visual4 div:nth-child(2){
+        max-width: 650px;
+    }
+
+    .visual4 div p,
+    .visual4 div h2 {
+        text-align: center;
+    }
+
+    
+    .visual6 {
+        max-width: 1200px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        margin-top: 2.5em;
+    }
+
+    .visual6 div h2{
+        padding-left: 24px;
+    font-size: clamp(1.5em, 5vw, 2.4em);
+    }
+    .visual6 div ul li{
+        line-height: 1.5;
+        padding-bottom: 20px;
+
+    }
+    .visual6 div h2{
+        padding-bottom: 1em;
+        margin: 0;
+        text-align: center;
+    }
+    .visual6 div ul{
+        padding-bottom: 2em; 
+        padding-left: 10%;
+    }
+    .b_cont {
+        font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+            border: 2px solid var(--button-ramka);
+            color: var(--button-ramka);
+            /* Цвет рамки (можете заменить на нужный вам) */
+            padding: 15px 50px;
+            /* Отступы внутри рамки */
+            display: inline-block;
+            /* Это чтобы рамки не распространялись на всю ширину строки */
+            text-decoration: none;
+            /* Убираем подчеркивание у ссылок */
+background-color:  rgb(220, 225, 236);;
+            margin: 0 25px;
+            /* Добавляем немного отступа между ссылками */
+        }
+
+        .b_cont:hover {
+            background-color: var(--button-primary);
+            /* Черный фон при наведении */
+            color: #fff;
+            background-color: var(--button-hover);
+            /* Белый цвет текста при наведении */
+        }
+        ul li span{
+            font-weight: 600;
+        }
+@media(max-width:768px){
+    .visual2_div1 ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.visual1{
+    margin-top: 72px;
+}
+.visual6 {
+   
+   display: flex!important;
+   align-items: center;
+   grid-template-columns: 1fr;
+   margin: 0 auto;
+   margin-top: 0.5em;
+   flex-direction: column-reverse;
+}
+.visual6 div h2 {
+
+
+    padding: 0;
+}
+.visual3 h2 {
+    padding: 0 5px;
+    text-align: center;
+}
+.sobs {
+    text-align: center;
+    padding-left: 0;
+}
+.visual3_div1 {
+    background-color: #d8d8d8;
+    background-image: none;
+   
+}
+.visual4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: none;
+   background-color: #d1c9be;
+    padding: 20px 0;
+}
+.visual5{
+    background-color: #d6def1;
+
+}
+.visual6 {
+    max-width: 1200px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    margin-top: 0.5em;
+}
+
+.visual6 div h2 {
+    padding-bottom: 0;
+    /* margin: auto; */
+    text-align: center;
+    font-size: 2em;
+}
+.visual6 div ul {
+    padding-bottom: 0;
+}
+.b_cont {
+    display: flex!important;
+    border: 2px solid var(--button-ramka);
+    color: var(--button-ramka);
+    padding: 15px 50px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(220, 225, 236);
+    /* margin: 0 25px; */
+    margin: 0;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+
+}
+
+@media(max-width:1024px){
+    .visual3_div1 div div, .visual5_div1 div div{
+        max-width: 100%;
+    }
+    .visual2_div1 div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.visual3_div1 div div img, .visual4 img, .visual5_div1  div img{
+    display: block;
+}
+ul{
+    padding: 0;
+}
+.visual2 h2, .visual3 h2, .know_h2 {
+ 
+    font-size: 28px
+}
+.visual3_div1 div div ul li, .visual5_div1 div div ul li, .visual6 div ul li{
+    margin: 0 20px;
+}
+.visual2_div1 div ul li {
+    padding-left: 18px;
+}
+.visual3 h2 {
+
+    margin-top: 20px;
+  
+}
+.visual4 {
+    margin-top: 0px;
+}
+.visual4 div p {
+
+    padding-top: 20px;
+}
+.visual4 {
+    margin-top: 0px!important;
+}
+.visual5_div1 h2 {
+    text-align: center;
+   
+    padding: 0;
+}
+.visual5 {
+ 
+    margin-top: 10px;
+}
+.sobs {
+ 
+    padding: 0;}
+.visual6 div h2{
+    padding: 0;
+}
+li{
+    font-size: 18px;
+}
+.visual2_div1 ul {
+
+    margin-left: 20px;
+}
+li{
+    text-align: justify;
+}
+ .visual4 div ul li, .visual5_div1 div div ul li {
+    font-size: 18px;
+    line-height: 1.3;
+    padding-bottom: 20px;
+}
+.visual4{
+
+    padding-bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: none;
+    background-color: #d1c9be;
+    padding: 0px 20px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    /* padding: 0; */
+
+}
+.visual3{
+    margin-bottom: 10px;
+}
+.visual3_div1 div div ul li, .visual4 div ul li, .visual5_div1 div div ul li {
+    font-size: 18px;
+    line-height: 1.3;
+    padding-bottom: 20px;
+    padding-right: 0;
+    text-align: left;
+}
+.visual3_div1 div, .visual5_div1 div {
+  
+    padding-bottom: 0;
+}
+.visual4{
+    margin-top: -16px;
+}
+.desc{
+    display: none;
+
+}
+.mobile{
+    display: block;
+    font-size: 33px!important;
+    line-height: 38px;
+}
+.visual6 div ul li {
+    line-height: 1.3;
+    padding-left: 20px;
+
+}
+.visual3_div1 div div img{
+    margin-top: -60px;
+}
+.visual4 img{
+    margin-top: -45px;
+}
+.visual6{
+    margin-top: 40px;
+}
+.visual6 div ul {
+   
+    padding: 0 46px;
+
+}
+.visual6 div ul li{
+    padding-bottom: 20px;
+}
+.b_cont {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: 600;
+    margin-top: 30px;
+    font-size: 18px;
+    margin: 0 25px;
+    padding: 10px 15px;
+}
+.visual6_div1 img{
+    margin-top: 10px
+}
+.b_cont {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: 600;
+    margin-top: 30px;
+    font-size: 18px;
+    margin: 0 25px;
+    padding: 10px 15px;
+    color: white;
+    /* font-weight: 400; */
+    background-color: #494949;
+    margin-top: -10px;
+}
+.visual5_div1 div img{
+    margin-top: -40px;
+}
+footer {
+    margin-top: 25px;
+}
+
+
+}
+    /* .visual6_div1 */
+</style>
+
+<body>
+
+    <body>
+        <header>
+            <!-- Бургер-кнопка в header -->
+            <div class="burger" onclick="toggleMobileMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="visual-design.html">Система Visual Design</a></li>
+                    <li><a href="services.html">Мои услуги</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+            <!-- Выезжающее меню в body -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="visual-design.html">Система Visual Design</a></li>
+            <li><a href="services.html">Мои услуги</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <!-- <div class="burger open" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> -->
+    </div>
+        <div class="visual1">
+            <img loading="lazy" src="img/visual.jpg" alt="">
+
+        </div>
+
+        <div class="visual2">
+            <h2><span>Что?</span> Вы узнаете на консультации</h2>
+            <div class="visual2_div1">
+                <div>
+                    <ul>
+                        <li>Как создавать нужное впечатление и вызывать доверие у клиентов, партнеров, коллег
+                        </li>
+                        <li>Свои сильные и слабые стороны, как принять и управлять ими
+                        </li>
+                        <li>Как транслировать на 100% ваши компетенции и знания через визуал
+                        </li>
+                    
+                        <li>
+                            Природные таланты и как их можно использовать в своей деятельности
+
+                        </li>
+                        <li>
+                            Как прийти к идеальной комплекции без физических нагрузок, зная точно особенности своего
+                            типажа
+
+                        </li>
+                        <li>Колористика: ваши цвета, контрасты, оттенки для одежды и аксессуаров
+                        </li>
+                        <li>Дизайн одежды: ткани, фактуры, рисунки для одежды и аксессуаров
+                        </li>
+                        <li>Персональный стиль: полная карта силуэтов и форм одежды и аксессуаров
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="visual3">
+            <h2><span>Для кого? </span> Будет максимально полезно</h2>
+            <div class="visual3_div1">
+                <div>
+                    <div>
+                        <p class="sobs">Собственникам и предпринимателям
+                        </p>
+                        <h2 class="know_h2">УЗНАЕТЕ
+                        </h2>
+                        <ul>
+                            <li>
+                                <span>Как понятно для клиентов повышать стоимость своих услуг?</span><br>
+                                Оппонент считывает по вашему визуалу, может ли он доверять вам и
+                                насколько Вы действительно компетентны, ответственны и уверенны.
+
+
+                            </li>
+
+                            <li><span>Как вызывать доверие у клиентов, партнеров, инвесторов?
+                            </span><br>
+                                Уже по внешнему виду зачастую можно определить, в какой сфере
+                                человек работает и какими навыками и знаниями обладает.
+
+                            </li>
+                            <li>
+                                <span>Свои сильные и слабые стороны, уметь ими управлять
+                                </span><br>
+                                Сильные стороны считываются легко окружающими, если мы их
+                                транслируем, а слабые – можно знать и работать над ними в развитии.
+
+                            </li>
+                        </ul>
+                        <img src="img/girl_nout.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="visual4">
+            <div></div>
+            <div>
+                <p>Руководителям
+                </p>
+                <h2 class="know_h2">НАУЧИТЕСЬ
+                </h2>
+                <ul>
+                    <li><span>Влиять на решение о сотрудничестве и заключение сделок
+                    </span><br>
+                        Одеваясь так, чтобы вызывать доверие в глазах оппонента ответственность,
+                        уверенность, знания и компетентность.
+                    </li>
+                    <li>
+                        <span>Получать более дорогие и выгодные для вас контракты
+                        </span><br>
+                        Повышая уровень вашей уверенности, считывания вас как профессионала
+                        в своем деле, увеличится и ценность работы именно с вами.
+
+                    </li>
+                    <li><span>Транслировать свою уникальность и профессионализм
+                    </span><br>Если визуал отражает на 100% ваши уникальные компетенции и опыт,
+                        то вас запоминают как супер профессионала и гармоничную личность.
+                    </li>
+                </ul>
+            </div>
+            <img src="img/oldmen.png" alt="">
+        </div>
+
+        <div class="visual5">
+
+            <div class="visual5_div1">
+                <div>
+                    <div>
+                        <p class="sobs">Экспертам и специалистам
+
+                        </p>
+                        <h2 class="know_h2">СМОЖЕТЕ
+                        </h2>
+                        <ul>
+                            <li>
+                                <span>Запоминаться как супер профессионал
+                                </span><br>
+                                Если визуал отражает ваш опыт и знания, то окружающие это
+                                считывают и воспринимают вас как профессионала и доверяют.
+
+
+
+                            </li>
+
+                            <li><span>Повышать стоимость своих услуг и свою ценность
+
+                            </span><br>
+                                Одеваясь гармонично для вашей личности, Вы транслируете
+                                уверенность, ответственность и экспертность, ваша ценность
+                                повышается.
+
+
+                            </li>
+                            <li>
+                                <span>Выстраивать длительные отношения с партнерами
+
+                                </span><br>
+                                Как мы понимаем друг друга, выстраиваются доверительные
+                                долгосрочные отношения. Это работает и в деловой сфере, и в
+                                личной.
+
+
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="img/dve.png" alt="">
+
+                </div>
+            </div>
+        </div>
+        <div class="visual6">
+            <div class="visual6_div1">
+                <img loading="lazy" src="img/visual6.jpg" alt="">
+            </div>
+            <div>
+                <h2 class="desc">
+                    Записаться на<br>
+                    персональную консультацию
+
+                </h2>
+                <h2 class="mobile">Записаться на личную консультацию</h2>
+                <ul>
+                    <li>подробный физиогномический анализ личности
+                    </li>
+                    <li>полная карта стилевых образов: цвета, ткани, силуэты, фасоны
+                    </li>
+                </ul>
+                <a href=""  class="b_cont showModalBtn"  data-text="Записаться на консультацию">  Записаться на консультацию</a>
+            </div>
+
+        </div>
+
+
+            <!-- модалка -->
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2 id="modalHeading">Начальный заголовок</h2>
+            <form>
+                <div class="form-group">
+                
+                    <input type="text" id="name" name="name" placeholder="Имя" required>
+                </div>
+                <div class="form-group">
+                  
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                </div>
+        
+
+
+                <input type="hidden" id="textInput" placeholder="Значение из data-text">
+                <button type="submit">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="overlaymodal" class="overlaymodal"></div>
+
+    </body>
+    <footer>
+        <div class="footer">
+            <div>
+                <p>Обо мне</p>
+                <p class="footer_p1">
+                    Система Visual design
+                </p>
+            </div>
+            <div>
+                <p>Мои услуги</p>
+                <div class="footer_sdvig">
+                    <p class="footer_p1">
+                        Персональная консультация по визуалу
+                    </p>
+                    <p>Разбор гардероба</p>
+                    <p>Индивидуальный пошив</p>
+                </div>
+            </div>
+            <div>
+                <p>Контакты</p>
+                <p class="footer_p1">
+                    8 925 821 7983
+                </p>
+                <p>info@gracecouture.ru</p>
+            </div>
+        </div>
+        <div>
+            <p class="p_footer">@ 2010-2023, все права защищены.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</html>

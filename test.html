@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление данных в текстовый файл</title>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <textarea id="additionalData" rows="5" cols="40">Дополнительные данные, которые будут добавлены в файл.</textarea><br>
+    <button onclick="appendToFile()">Добавить в файл</button>
+
+    <script>
+        let selectedFile = null;
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            selectedFile = event.target.files[0];
+        });
+
+        function appendToFile() {
+            const additionalData = document.getElementById('additionalData').value;
+
+            if (selectedFile) {
+                const fileReader = new FileReader();
+
+                fileReader.onload = function(event) {
+                    const existingContent = event.target.result;
+                    const finalContent = existingContent + '\n' + additionalData;
+
+                    const blob = new Blob([finalContent], { type: 'text/plain' });
+
+                    const url = URL.createObjectURL(blob);
+
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'updated_file.txt';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                };
+
+                fileReader.readAsText(selectedFile);
+            } else {
+                console.error('Выберите файл для добавления данных.');
+            }
+        }
+    </script>
+</body>
+</html>
